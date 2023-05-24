@@ -140,6 +140,7 @@ const App = () => {
         </div>
       </form>
       <div className="progress-bar-container">
+        <h3>Progress : </h3>
         <ProgressBar steps={steps} activeStep={counter} />
       </div>
       <div className="map-container">

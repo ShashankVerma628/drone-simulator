@@ -92,10 +92,41 @@ body {
     cursor: not-allowed;
 }
 
+.progress-bar-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .progress-bar {
     max-width: 800px;
     color: #fff;
     font-size: 1.1rem;
     border: 1px solid #000;
     margin: 0 auto;
+}
+
+@media(max-width :630px) {
+    .input-wrapper {
+        flex-direction: column;
+    }
+
+    .input-wrapper>.input-container {
+        width: 100%;
+    }
+
+    .input-wrapper>h3 {
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 0.5em;
+    }
+
+    .map-container {
+        margin: 0.5em;
+    }
+
+    .progress-bar, .progress-bar-container {
+        margin: 1em;
+    }
 }
