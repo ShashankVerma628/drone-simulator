@@ -52,10 +52,12 @@ const App = () => {
   const lineDistance = turf.length(route.features[0]);
   const arc = [];
   const steps = 100;
+  // to display arc between the two points
   for (let i = 0; i < lineDistance; i += lineDistance / steps) {
     const segment = turf.along(route.features[0], i);
     arc.push(segment.geometry.coordinates);
   }
+  route.features[0].geometry.coordinates = arc;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -128,7 +130,7 @@ const App = () => {
           </div>
         </div>
         <div className="input-time-container input-container">
-          <label>Time : </label>
+          <label>Time(in millisecond) : </label>
           <input placeholder="running time" value={givenTime} onChange={(e) => setGivenTime(e.target.value)} />
         </div>
         <div className="submit-btn-container">
